@@ -35,6 +35,10 @@ public class UserServiceImpl implements UserService {
         userMapper.updateById(user);
     }
 
+    /**
+     * QueryWrapper为条件构造器
+     * @param id
+     */
     @Override
     public void delete(Long id) {
         QueryWrapper<User> wrapper = new QueryWrapper<>();
