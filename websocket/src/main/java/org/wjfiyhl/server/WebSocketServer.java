@@ -7,6 +7,7 @@ import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -29,6 +30,8 @@ public class WebSocketServer {
 
     private static AtomicInteger onlineCount = new AtomicInteger();
 
+    private static CopyOnWriteArraySet<WebSocketServer> webSocketSet = new CopyOnWriteArraySet<>();
+
 
     /**
      * 使用@OnOpen注解：
@@ -43,6 +46,7 @@ public class WebSocketServer {
         sessionPool.put(userId,session);
         sessionIds.put(session.getId(),userId);
         onlineCount.incrementAndGet(); // 在线人数+1
+        webSocketSet.add(this);
     }
 
 
@@ -68,6 +72,7 @@ public class WebSocketServer {
         sessionPool.remove(sessionIds.get(session.getId()));
         sessionIds.remove(session.getId());
         onlineCount.decrementAndGet(); // 在线人数-1
+        webSocketSet.remove(this);
     }
 
 
