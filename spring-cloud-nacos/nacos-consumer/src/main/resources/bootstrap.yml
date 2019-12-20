@@ -1,0 +1,19 @@
+# 服务地址
+server:
+  port: 8090
+# 应用名称和nacos服务器地址配置，还有配置中心的地址
+spring:
+  application:
+    name: nacos-comsumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        group: DEFAULT_GROUP
+        ext-config:
+          - data-id: wjfiyhl.yaml
+            group: DEFAULT_GROUP
+            refresh: true
