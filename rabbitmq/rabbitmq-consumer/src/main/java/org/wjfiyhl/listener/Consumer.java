@@ -12,10 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class Consumer {
 
-    // public static final String QUEUE_INFO_PHONE = "queue_info_phone";
     public static final String QUEUE_INFO_PHONE = "info.phone.queue";
 
-    //public static final String QUEUE_INFO_EMAIL = "queue_info_email";
     public static final String QUEUE_INFO_EMAIL = "info.email.queue";
 
     /**
