@@ -15,12 +15,12 @@ import javax.annotation.Resource;
  */
 
 @RestController
-@RequestMapping("/nacos")
+@RequestMapping("/consumer")
 /**
  * 自动刷新配置在nacos中的配置信息。
  */
 @RefreshScope
-public class HelloController {
+public class ConsumerController {
 
     @Resource
     private RestTemplate restTemplate;
@@ -32,12 +32,12 @@ public class HelloController {
     private boolean flag;
 
 
-    @RequestMapping("/hello/{year}")
-    public String hello(@PathVariable("year") Integer year) {
+    @RequestMapping("/nacos/{year}")
+    public String nacos(@PathVariable("year") Integer year) {
         if (flag) {
             year++;
         }
-        return restTemplate.getForObject("http://nacos-provider//hello/" + year, String.class);
+        return restTemplate.getForObject("http://nacos-provider//provider/nacos/" + year, String.class);
     }
 
 }

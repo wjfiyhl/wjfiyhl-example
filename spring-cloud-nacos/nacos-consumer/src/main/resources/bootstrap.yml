@@ -1,6 +1,6 @@
 # 服务地址
 server:
-  port: 8090
+  port: 8092
 # 应用名称和nacos服务器地址配置，还有配置中心的地址并加载了在配置中心中存储的wjfiyhl.yaml文件的配置信息。
 spring:
   application:

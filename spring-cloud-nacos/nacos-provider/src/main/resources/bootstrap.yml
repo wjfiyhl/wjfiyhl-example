@@ -1,6 +1,6 @@
 # 服务地址
 server:
-  port: 8080
+  port: 8091
 # 应用名称和nacos服务器地址配置
 spring:
   application:
