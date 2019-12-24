@@ -6,6 +6,7 @@ import org.wjfiyhl.mapper.UserMainMapper;
 import org.wjfiyhl.service.UserService;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author: WJF
@@ -21,5 +22,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findOne(Long id) {
         return userMainMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<User> findList() {
+        return userMainMapper.findList();
     }
 }

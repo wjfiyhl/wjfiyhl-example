@@ -6,6 +6,7 @@ import org.wjfiyhl.entity.User;
 import org.wjfiyhl.service.UserService;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author: WJF
@@ -23,6 +24,11 @@ public class UserController {
     @RequestMapping("/findOne")
     public User findOne(Long id) {
         return userService.findOne(id);
+    }
+
+    @RequestMapping("/findList")
+    public List<User> findList() {
+        return userService.findList();
     }
 
 }
