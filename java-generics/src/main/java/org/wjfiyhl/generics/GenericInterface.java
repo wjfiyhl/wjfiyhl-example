@@ -8,13 +8,17 @@ package org.wjfiyhl.generics;
 
 /**
  * 定义泛型接口
- * @param <Y>
- * @param <W>
+ * @param <T>
  */
-public interface GenericInterface<Y, W> {
+public interface GenericInterface<T> {
 
-    default String[] name(Y y, W w) {
-        return new String[]{y.getClass().getName(),y.getClass().getName()};
-    }
+    public T name();
+
+    /**
+     * 定义泛型方法
+     * @param e
+     * @param <E>
+     */
+    public <E> void get(E e);
 
 }

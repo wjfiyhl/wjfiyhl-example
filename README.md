@@ -11,6 +11,7 @@
 5. websocket
 6. java-generics
 7. mybatis
+8. tkmybatis
 
 ## 学习交流
 如果对我写的东西有疑问，可以给我发邮件说明哦。有想学习的技术和课题也可以提出来，我每个星期都会更新的。欢迎骚扰我，我的邮箱<a>wjfiyhl@163.com</a>。
