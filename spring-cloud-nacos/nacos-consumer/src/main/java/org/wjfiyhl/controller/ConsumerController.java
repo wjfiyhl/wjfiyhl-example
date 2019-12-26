@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/consumer")
 /**
- * 自动刷新配置在nacos中的配置信息。
+ * 自动刷新配置在nacos中的配置信息，配置信息在nacos服务器上，我已经将配置信息从服务器上摘抄至resources/nacos-config。
  */
 @RefreshScope
 public class ConsumerController {
