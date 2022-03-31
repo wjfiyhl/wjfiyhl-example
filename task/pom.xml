@@ -14,7 +14,7 @@
     </modules>
 
     <properties>
-        <spring-boot-starter.version>2.2.2.RELEASE</spring-boot-starter.version>
+        <spring-boot-starter.version>2.5.12</spring-boot-starter.version>
         <spring-boot-starter-web.version>2.2.2.RELEASE</spring-boot-starter-web.version>
         <lombok.version>1.18.10</lombok.version>
         <quartz.version>2.2.2.RELEASE</quartz.version>
